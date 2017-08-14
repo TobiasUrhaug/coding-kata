@@ -13,7 +13,7 @@ dependencies {
     implementation 'com.google.guava:guava:20.0'
 
     // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
-	implementation: 'org.apache.commons', name: 'commons-lang3', version: '3.6'
+	implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.6'
 
     testImplementation 'junit:junit:4.12'
 

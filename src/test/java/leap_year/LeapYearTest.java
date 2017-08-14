@@ -1,9 +1,8 @@
 package leap_year;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Test;
-
-import leap_year.LeapYear;
 
 public class LeapYearTest
 {
@@ -29,6 +28,14 @@ public class LeapYearTest
     {
 	assertThat(LeapYear.test(2004)).isTrue();
 	assertThat(LeapYear.test(2008)).isTrue();
+    }
+
+    @Test
+    public void a_gregorian_year_not_divisible_by_four_is_a_common_year()
+    {
+	assertThat(LeapYear.test(2001)).isFalse();
+	assertThat(LeapYear.test(2002)).isFalse();
+	assertThat(LeapYear.test(2003)).isFalse();
     }
 
     @Test
